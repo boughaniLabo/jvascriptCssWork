@@ -1,0 +1,389 @@
+:root{
+    --main-bg-color: #19c8fa;
+    --transparent-color: rgb(15 116 143 / 70%);
+    --section-padding: 100px;
+}
+*{
+
+    box-sizing: border-box;
+    padding : 0 ; 
+    margin: 0;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: "Open Sans", sans-serif;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.container {
+    padding: 0 15px ;
+    margin: 0 auto;
+}
+@media (min-width: 768px) {
+    .container {
+      width: 750px;
+    }
+  }
+  /* Medium */
+  @media (min-width: 992px) {
+    .container {
+      width: 970px;
+    }
+  }
+  /* Large */
+  @media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+  }
+  /**
+  start header Section 
+
+  */ 
+  header{
+      position: absolute;
+      width: 100%;
+      z-index: 2;
+    
+      
+  }
+  
+  header .container {
+      display: flex;
+      position: relative;
+      justify-content: space-between;
+      align-items: center ;
+      min-height:97px;
+  }
+  header .container::after{
+    content: '';
+    position: absolute;
+    width: calc(100% - 30px);
+    height: 1px ;
+    background-color: white;
+    left: 15px;
+    bottom: 0px;
+}
+  header .container .logo img{
+      height:40px;
+      width: 100%;
+  }
+  header .container nav{
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+  }
+  header .container nav ul {
+      display: flex;
+     
+  }
+  header .container ul li {
+      padding: 40px 10px;
+      font-size: 14px;
+      z-index: 2;
+      transition: 0.3s;
+      transition-property: all;
+      transition-duration: 0.3s;
+      transition-timing-function: ease;
+      transition-delay: 0s;
+      
+      text-transform: capitalize;
+  }
+  header .container .form  {
+   
+    width: 40px;
+    height: 30px;
+    position: relative;
+    margin-left: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid white;
+  
+ }
+ header .container .form i {
+     color: white;
+     font-size: 20px;
+ }
+ header .container nav li.active , header .container nav li:hover  {
+    border-bottom:1px solid var(--main-bg-color) ;
+    color:var(--main-bg-color) ;
+ } 
+ header .container nav li.active a ,header .container nav li:hover a {
+     color: inherit ; 
+}
+/***
+
+Start the landing part 
+*/
+.landing {
+    background-image:url('img/landing.jpg') ;
+    width: 100%;
+    height:100vh ; 
+    background-size: cover;
+    position: relative;
+}
+.landing .overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: rgba(0, 0, 0, 0.67);
+}
+.landing .text {
+position: absolute;
+left: 0;
+bottom: 50%;
+width: 50%;
+transform: translateY(50%);
+padding: 50px;
+background-color: var(--transparent-color);
+display: flex;
+justify-content: flex-end;
+color: white;
+}
+.landing .text .content{
+    width: 500px;
+}
+.landing .text .content h3{
+    font-size: 35px;
+    font-weight:normal;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+.landing .text .content p  {
+    line-height: 2;
+    font-size: 14px;
+}
+.landing .angle-cost{
+    position: absolute;
+    color: white;
+    font-size: 40px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.landing .angle-cost.left{
+    left: 30px;
+} 
+.landing .angle-cost.right{
+    right: 30px;
+} 
+.landing .bullet{
+    display: flex;
+    position: absolute;
+    bottom: 2%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.landing .bullet li  {
+    width: 20px;
+    height: 20px ;
+   
+    margin: 7px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+.landing .bullet li.active{
+    background-color: var(--main-bg-color);
+}
+/***
+
+end of  the landing part 
+*/
+
+/*
+
+the service section 
+
+**/
+.services{
+    padding: 0 var(--section-padding);
+}
+.special_heading{
+    text-align: center;
+    font-size: 40px;
+    font-weight: normal;
+    position: relative;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+.special_heading::before{
+    content: '';
+    position: absolute;
+    width: 120px;
+    height: 2px;
+    background-color: black;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.special_heading::after{
+    content:'';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    bottom: 0;
+    right: 50%;
+    transform: translate(50% , 50%);
+
+}
+.special_para{
+    margin:0 auto 100px ;
+    text-align: center;
+    width: 500px;
+    line-height: 2;
+    color:#777 ;
+}
+.services .col {
+    display: flex;
+}
+.services .col .service{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+.services .col .service i {
+    flex-basis:50px ;
+    margin-right: 30px;
+}
+.services .col .service .content h3{
+    color: var(--main-bg-color);
+    margin-bottom:40px ;
+ 
+}
+.services .col .service .content p {
+    line-height: 2;
+    color: #777;
+}
+/**
+
+the end of service section 
+*
+/**
+Start design section 
+*/
+.design {
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    height: 600px;
+    position: relative;
+    background-image: url("img/design-features.jpg");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.design::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+.design .image{
+    text-align: center ;
+    width: 50%;
+    position: relative;
+}
+.design .image img{
+    position: relative;
+    bottom: -150px;
+}
+.design .text{
+    padding: 50px;
+    background: var(--transparent-color);
+    flex: 1;
+    z-index: 2;
+}
+.design .text h3 {
+    font-size: 24px ;
+    font-weight: normal;
+    margin-bottom: 50px;
+    color: white;
+}
+.design .text ul li{
+    color: white;
+    padding: 15px;
+}
+.design .text ul li::before{
+    font-family: "Font Awesome 5 Free";
+    content: '\f108';
+    font-weight: 900;
+    margin-right: 20px;
+    position: relative;
+    top: 1px;
+}
+/**
+end design section 
+*/
+/*
+
+start of the section portfolio 
+
+*/
+.portfolio{
+    padding: var(--section-padding) 0;
+}
+.portfolio .filter {
+    display: flex;
+    width: 500px ;
+    margin: auto;
+   justify-content: center ;
+   padding: 15px;
+   margin-bottom: 10px;
+}
+.portfolio .filter li {
+    padding: 10px;
+}
+.portfolio .filter li.active{
+    background-color: var(--main-bg-color);
+}
+.portfolio .projects{
+    display: flex;
+    flex: row ;
+}
+
+.portfolio .projects .col{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.portfolio .projects .col .project{
+   flex-basis: 25%;
+}
+.portfolio .projects .col .project img {
+    max-width:100% ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+start of the section portfolio 
+
+*/

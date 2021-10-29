@@ -1,0 +1,157 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+/*
+*Start nav bar 
+*/
+nav{
+    height: 50px;
+    width: 100vw;
+    box-shadow:  0px  1px  2px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    z-index: 1000;
+    background-color: whitesmoke;
+
+}
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center ;
+    height: 100%;
+}
+nav .container .logo h1 {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: -1mm;
+}
+nav .container .navBar{
+    display: flex;
+    
+}
+nav .container .navBar li {
+    list-style: none;
+    padding: 10px;
+}
+nav .container .navBar li a {
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    text-transform: capitalize;
+    padding: 8px 8px;
+    transition: all 0.5s ease-in-out;
+    
+
+}
+nav .container .navBar li a:hover{
+    background-color: rgba(0, 0, 0, 0.11);
+    border-radius: 20px;
+}
+nav .container .burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+   
+}
+nav .container .burger span {
+    width : 20px ; 
+    height: 3px;
+    border-radius:30px ;
+    background-color: rgba(0, 0, 0, 0.9);
+    margin : 1.4px   ; 
+}
+.active{
+    background-color: rgba(0, 0, 0, 0.11);
+    border-radius: 20px;
+}
+
+@media only screen and (max-width: 768px){
+    nav .container .navBar {
+        position: absolute;
+        display: flex;
+        justify-content: center ;
+        flex-direction: column;
+        left  : 0 ; 
+        top : 50px ; 
+        background-color: rgba(0, 0, 0, 0.11);
+        min-height: 100vh;
+        width: 100%;
+        align-items: center ;
+        z-index: 1000;
+        background-color: whitesmoke;
+        transition: transform 1s  ease-in-out;
+        transform: translateX(-100%);
+    }
+    nav .container .navBar li{
+        padding:20px 0  ; 
+        width:100% ; 
+        text-align: center ;
+    }
+    nav .container .navBar li a {
+        min-width: 100%;
+        min-height: 100%; 
+    }
+    nav .container .burger{
+        display: flex;
+    }
+    
+  
+}
+nav .container ul.nav-act{
+    transform: translateX(0%); 
+}
+/**
+div to delete the space of nav bar 
+*/
+.clearwidht{
+    width: 100%;
+    height: 50px;
+}
+div .slider-container {
+    width: 100%;
+    height: 500px;
+    margin: 0 auto ;
+    overflow: hidden;
+    position: relative;
+    margin-top: 10px;
+}
+div .slider-container .slider{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+    
+    
+
+}
+div .slider-container .slider img {
+    min-width: 100%;
+    height: 100%;
+}
+div .slider-container .arrow{
+    width: 15px;
+    height: 15px;
+    font-size: 50px;
+    padding: 8px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;   
+    color: white;
+
+}
+.left{
+    top: 50%;
+    transform:translateY(-50%) ;
+}
+.right{
+    right: 50px;
+    top: 50%;
+    
+    transform:translateY(-50%) ;
+}

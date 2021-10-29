@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+  }
+.container{
+    display:flex;
+    width: 90vw;
+    
+
+    
+}
+ .panel {
+     background-size:cover ;
+     background-position: center;
+     background-repeat: no-repeat;
+     height: 80vh;
+     flex: 0.5;
+     margin: 10px ;
+     border-radius: 50px ;
+     position: relative;
+     transition: all 700ms ease-in;
+     cursor: pointer;
+    }
+
+.panel.active{
+flex : 5 ; 
+}
+.panel h3 {
+    position: absolute;
+    bottom:10px  ; 
+    left : 10px  ; 
+    color: white;
+    letter-spacing: 2px ;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: all 700ms ease-in;
+    
+}
+.panel.active h3{
+    opacity: 1;
+}
