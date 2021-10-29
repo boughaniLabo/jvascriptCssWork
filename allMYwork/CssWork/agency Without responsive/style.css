@@ -1,0 +1,439 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Work Sans", sans-serif;
+}
+body{
+    font-family: "Work Sans", sans-serif;
+}
+
+p{
+    color:#545B6B;
+	font-family:Arial;
+	font-size:15px;
+	padding:10px 5px;
+}
+.container {
+	width:80%;
+	margin:0 auto;
+}
+/* header Section  */
+.header{
+    height: 90px ; 
+    width  : 100%  ; 
+    display: flex;
+    align-items: center;
+    background-color: white;
+
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header .container .logo {
+    max-width  : 46px ; 
+    max-height: 33px ;
+
+}
+.header .container .logo img{
+    width: 150%;
+    height: 150%;
+}
+/**
+here we will make a humberger 
+
+*/
+.header .nav{
+ width: 27px;
+ height: 15px;
+ display: flex;
+ position: relative;
+
+ cursor: pointer;
+}
+.header .nav .humberger{
+    position: relative;
+    display: flex;
+    flex-direction:column;
+   
+}
+.header .nav .humberger span {
+    width:27px ;  
+    height: 1.5px ;
+    background-color: #24484f;
+    transition: all ease-in .5s;
+}
+.header .nav .humberger .tab1{
+    margin-bottom:4px ;
+}
+.header .nav .humberger .tab2{
+  width:18px ;
+
+}
+.header .nav .humberger .tab3{
+margin-top:4px ;
+}
+/* 
+hover effect 
+*/ 
+.header .nav .humberger:hover .tab2 {
+    width: 100%;
+}
+/*
+nav bar 
+*/
+.header .nav .navigation_bar{
+    position: absolute;
+    background-color: #f6f6f6;
+    right: 0;
+    top: calc(100% + 15px);
+    min-width: 200px;
+    display: none;
+}
+.header .nav .navigation_bar ul {
+    list-style: none;
+    position: relative;
+}
+.header .nav .navigation_bar ul li{
+    padding: 15px ;
+    text-transform:capitalize;
+    font-size: 17px;
+    color: #333;;
+    margin: 1px;
+    border-bottom: 1px solid #ddd;
+}
+.header .nav .navigation_bar ul::before{
+  
+    content: "";
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent #f6f6f6 transparent;
+    position: absolute;
+    right: 5px;
+    top: -20px;
+}
+.header .nav:hover  .navigation_bar{
+    display: block;
+}
+/* Hero Section */
+.hero_section{
+    width: 100%;
+    height: calc(100vh - 90px);
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    background-image:url('img/landing.jpg') ;
+    background-size:cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  
+}
+.hero_section .container{
+    display: flex ;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center ;
+    text-align: center;
+}
+.hero_section .container h3 {
+    font-size: 50px ;
+    font-weight: blod;
+    color: #10cab7;
+}
+.hero_section .container p {
+    font-size: 19px;
+    color: black;
+   
+    font-weight: 520;
+    line-height: 30px;
+}
+/* Features Styles */
+.features {
+    padding: 20px;
+    
+} 
+.features .container {
+    display : flex  ; 
+    justify-content: space-between;
+}
+.features .container .features-element{
+    display : flex ; 
+    flex-direction: column;
+    text-align:center ;
+    justify-content: center ;
+    align-items: center ;
+    padding: 20px;
+}
+.features .container .features-element i {
+    color: #10cab7;
+}
+.features .container .features-element h3{
+    font-weight: 600px;
+    font-size: 16px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin: 30px 0 ;
+}
+.features .container .features-element p {
+    font-size: 17px;
+  
+    line-height: 1.8;
+    color: #777;
+}
+/*
+##############################Services Section #####################
+*/
+.services {
+    display: flex;
+    justify-content: center ;
+    flex-direction: column;
+    text-align: center ;
+    margin-top:80px ;
+    padding: 120px 0 ;
+}
+
+
+.special_header {
+    font-size : 100px ; 
+    letter-spacing: -5px ;
+    text-align: center;
+    font-weight: 800;
+    color:#ebeced ;
+}
+.special_para{
+    font-size: 20px;
+    margin-top: -45px;
+    text-align: center;
+}
+.services .services_all{
+    display: flex;
+    margin-top:40px  ;
+}
+.services .services_all .col{
+    display: flex;
+    flex-direction: column;
+}
+.services .services_all .col .service{
+    display: flex;
+    margin-bottom: 40px;
+}
+.services .services_all .col .service i{
+    color:#10cab7 ;
+    padding: 5px;
+    flex-basis: 60px;
+}
+.services .services_all .col .service div{
+    text-align: left;
+    flex: 1;
+    margin-left: 10px ;
+    
+}
+.services .services_all .col .service div h3{
+    margin-bottom: 20px;
+    font-family: "Work Sans", sans-serif;
+
+}
+.services .services_all .col .service div p {
+    color: #444;
+    font-weight: 300;
+    line-height: 1.6;
+    font-family: "Work Sans", sans-serif;
+    flex: 1;
+}
+.services .services_all .col .image{
+   height: 70%;
+   position: relative;
+  
+}
+.services .services_all .col .image img {
+height: 100%;
+}
+.services .services_all .col .image::before{
+    content: '';
+    width: 90px;
+    position: absolute ;
+    height: calc(100% + 100px );
+    background-color: #2c4755;
+    right: 10px;
+    top: -50px;
+    z-index: -1;
+}
+/**
+the start portfolio 
+*/
+.portfolio{
+    background-color: #f6f6f6;
+    padding: 120px 0 ;
+}
+.portfolio .container{
+    display: flex;
+    flex-direction: column;
+}
+.portfolio .container .projects{
+    padding-top: 60px ;
+    display: flex;
+    flex-direction: row;
+ 
+    
+}
+.portfolio .container .projects .project{
+    margin: 0 20px;
+    background: white;
+
+
+}
+.portfolio .container .projects .project .img {
+   max-width: 100%;
+}
+.portfolio .container .projects .project .img img{
+max-width: 100%;
+}
+.portfolio .container .projects .project .desc {
+    padding:30px ;
+}
+.portfolio .container .projects .project .desc h4{
+    font-size: 20px ;
+    font-family: "Work Sans";
+    text-transform:capitalize ; 
+    
+}
+.portfolio .container .projects .project .desc p {
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+/**
+The srart of about section 
+*/
+.about{
+    padding: 120px 0 ;
+    
+}
+
+.about .container .items {
+    display: flex ;
+  flex-direction: row;
+  margin-top:60px ;
+  justify-content: space-between;
+}
+
+.about .container .items .img-item::before{
+   content: '';
+   position: absolute;
+   width: 100px ;
+   height: calc(100% + 50px );
+   background-color:#ebeced ;
+   z-index: -1;
+   top: -25px ;
+   left:-30px;
+   
+} 
+.about .container .items .img-item::after{
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 300px;
+ z-index: -1;
+    border-left:75px solid #10cab7  ;
+    border-bottom:75px solid #10cab7  ;
+    top:-40px ;
+    right: -180px;
+
+}
+.about .container .items .img-item  {
+    width: 250px;
+    height: 375px;
+    position: relative;
+}
+.about .container .items .img-item img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.about .container .items .desc-item {
+    flex-basis: calc(100% - 500px);
+} 
+.about .container .items .desc-item{
+    padding: 30px;
+}
+.about .container .items .desc-item .para1{
+  margin-bottom: 50px;
+  line-height: 1.7;
+  font-weight: 800;
+  
+}
+.about .container .items .desc-item .para2{
+    margin-top: 50px;
+    color: #777;
+    line-height: 2;
+    
+}
+
+/**
+The end  of about section 
+*/
+
+
+/**
+The start   of contact  section 
+*/
+.contact{
+    padding: 120px 0 ;
+    background-color: #f6f6f6;
+}
+.contact .container .contact-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+    align-items: center;
+    margin-top: 50px;
+  
+    padding: 20px;
+}
+.contact .container .contact-info h2{
+    font-size: 35px;
+    font-weight: 800px;
+    color: #2c4755;
+    letter-spacing: -2px;
+    margin-bottom: 15px;
+}
+.contact .container .contact-info a {
+    text-decoration: none;
+    color: #10cab7;
+    font-size: 30px;
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 15px;
+}
+.contact .container .contact-info div i {
+    padding-left: 5px;
+    color:#2c4755 ;
+}
+/** 
+
+the end of this section 
+*/
+footer{
+    width: 100%;
+    height: 80px;
+    text-align: center;
+    padding-top: 30px;
+    background-color:#2c4755;
+    font-size: 18px;
+    
+    color: white;
+}
+footer span {
+    color: #10cab7;
+
+}
+
+/**
+
+the footer section 
+*/
